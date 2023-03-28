@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+        <style>
+            @media (min-width: 992px) {
+                .container {
+                    max-width: 960px;
+                }
+            }
+            h1 {
+                font-size: calc(1.75rem + 1.75vw);
+            }
+        </style>
+        <title>TRABAJANDO CON SVG</title>
+    </head>
+    <body>
+        
+        <header class="container">
+            <div class="row py-4">
+                <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
+                    <h1 class="mb-3 mt-5 text-center">TRABAJANDO CON SVG</h1>
+
+                    <h2 class="mb-5 text-center text-uppercase fs-5">Clara Echeverría</h2>
+
+                    <p class="lead">Reemplaza este párrafo con un texto introductorio sobre SVG, de una extensión máxima de cien palabras. En este y todos los reemplazos, respeta los colores del código fuente en tu editor. Los colores son indicaciones. Imagina que el editor de código fuente te está indicando: En el lenguaje que reconozco, esto es algo que no debes confundir con eso.</p>
+                </div>
+            </div>
+        </header>
+
+        <main class="container">
+            <section>
+                <div class="row">
+                    <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
+                        <h2 class="text-center mt-5">GRÁFICA NO FIGURATIVA</h2>
+                        <h3 class="text-center my-3">svg como src de un elemento img</h3>
+                        <p>Reemplaza este párrafo con un texto que explique de que trata la gráfica que sigue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Agrega que el SVG que sigue es tratado tal como se podría tratar a una imagen rasterizada.</p>
+                    </div>
+                    <figure class="shadow-sm col-md-11 col-lg-10 col-xl-9 col-xxl-8 mx-auto">
+                        <img loading="lazy" src="img/nofig1.svg" class="w-100" alt="describe lo que se ve en la imagen" />
+                        <figcaption class="p-3 text-center text-muted small">Gráfica no figurativa generada con <a href="https://app.rawgraphs.io/" class="link-dark">RAWGraphs</a></figcaption>
+                    </figure>
+                    <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
+                        <h3 class="text-center mt-5 mb-3">svg como data de un elemento object</h3>
+                        <p>Reemplaza este párrafo con un texto que explique de que trata la gráfica que sigue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Agrega que el SVG que sigue es tratado a modo distinto de una imagen rastarizada.</p>
+                    </div>
+                    <figure class="shadow-sm col-md-11 col-lg-10 col-xl-9 col-xxl-8 mx-auto">
+                        <object type="image/svg+xml" data="img/nofig2.svg">Acá se vería una gráfica</object>
+                        <figcaption class="p-3 text-center text-muted small">Gráfica no figurativa generada con <a href="https://app.rawgraphs.io/" class="link-dark">RAWGraphs</a></figcaption>
+                    </figure>
+                    <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
+                        <h3 class="text-center mt-5 mb-3">svg como svg</h3>
+                        <p>Reemplaza este párrafo con un texto que explique de que trata la gráfica que sigue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Agrega que el SVG que sigue está entre líneas del HTML.</p>
+                    </div>
+                    <figure class="shadow-sm col-md-11 col-lg-10 col-xl-9 col-xxl-8 mx-auto">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1100" height="900">
+    <rect width="1100" height="900" x="0" y="0" fill="#FFFFFF" id="backgorund" />
+    <g transform="translate(20,20)" id="viz">
+        <g id="nodes">
+            <g transform="translate(431,431)"><path id="p_1292" d="M-7.898971854500427e-14,430A430,430,0,1,1,7.898971854500427e-14,-430A430,430,0,1,1,-7.898971854500427e-14,430Z" fill="none" stroke="#ccc" /></g>
+            <g transform="translate(291.4150369143539,459.4238447956046)" id="Asia">
+                <path
+                    id="p_970.5874418321365"
+                    d="M-4.036715561562975e-14,219.74856012217802A219.74856012217802,219.74856012217802,0,1,1,4.036715561562975e-14,-219.74856012217802A219.74856012217802,219.74856012217802,0,1,1,-4.036715561562975e-14,219.74856012217802Z"
+                    fill="none"
+                    stroke="#ccc"
+                />
+            </g>
+            <g transform="translate(659.8053058717527,459.4238447956046)" id="Africa">
+                <path
+                    id="p_1265.960494185471"
+                    d="M-2.69541105261073e-14,146.7313435181137A146.7313435181137,146.7313435181137,0,1,1,2.69541105261073e-14,-146.7313435181137A146.7313435181137,146.7313435181137,0,1,1,-2.69541105261073e-14,146.7313435181137Z"
+                    fill="none"
+                    stroke="#ccc"
+                />
+            </g>
+            <g transform="translate(538.001375309435,709.6205899961616)" id="Europe">
+                <path
+                    id="p_1377.2510037820225"
+                    d="M-2.381246805700561e-14,129.6290384764259A129.6290384764259,129.6290384764259,0,1,1,2.381246805700561e-14,-129.6290384764259A129.6290384764259,129.6290384764259,0,1,1,-2.381246805700561e-14,129.6290384764259Z"
+                    fill="none"
+                    stroke="#ccc"
+                />
+            </g>
+            <g transform="translate(537.4338227340362,212.69646120635554)" id="South America">
+                <path
+                    id="p_876.8958765663358"
+                    d="M-2.3286461587706954e-14,126.76559262594405A126.76559262594405,126.76559262594405,0,1,1,2.3286461587706954e-14,-126.76559262594405A126.76559262594405,126.76559262594405,0,1,1,-2.3286461587706954e-14,126.76559262594405Z"
+                    fill="none"
+                    stroke="#ccc"
+                />
+            </g>
+            <g transform="translate(315.9652050302776,131.4612104109529)" id="North America">
+                <path
+                    id="p_554.6477118260023"
+                    d="M-1.9696232612706054e-14,107.22129638477173A107.22129638477173,107.22129638477173,0,1,1,1.9696232612706054e-14,-107.22129638477173A107.22129638477173,107.22129638477173,0,1,1,-1.9696232612706054e-14,107.22129638477173Z"
+                    fill="none"
+                    stroke="#ccc"
+                />
+            </g>
+            <g transform="translate(225.2710136746634,476.2714925659234)" id="Shanghai">
+                <path
+                    id="p_768.6870278535599"
+                    d="M-1.2334248521041172e-14,67.14452161297312A67.14452161297312,67.14452161297312,0,1,1,1.2334248521041172e-14,-67.14452161297312A67.14452161297312,67.14452161297312,0,1,1,-1.2334248521041172e-14,67.14452161297312Z"
+                    fill="#ff7f0e"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(360.41468463867324,476.2714925659234)" id="Karachi">
+                <path
+                    id="p_902.7749612385262"
+                    d="M-1.2140312674003895e-14,66.08878403392964A66.08878403392964,66.08878403392964,0,1,1,1.2140312674003895e-14,-66.08878403392964A66.08878403392964,66.08878403392964,0,1,1,-1.2140312674003895e-14,66.08878403392964Z"
+                    fill="#ff7f0e"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(293.87218880598306,589.3871447730157)" id="Beijing">
+                <path
+                    id="p_946.4968198366194"
+                    d="M-1.1616537769727944e-14,63.23748625762046A63.23748625762046,63.23748625762046,0,1,1,1.1616537769727944e-14,-63.23748625762046A63.23748625762046,63.23748625762046,0,1,1,-1.1616537769727944e-14,63.23748625762046Z"
+                    fill="#ff7f0e"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(293.81454772008067,371.8433186289248)" id="Delhi">
+                <path
+                    id="p_721.5167879880794"
+                    d="M-1.0261117438367217e-14,55.858921639073984A55.858921639073984,55.858921639073984,0,1,1,1.0261117438367217e-14,-55.858921639073984A55.858921639073984,55.858921639073984,0,1,1,-1.0261117438367217e-14,55.858921639073984Z"
+                    fill="#ff7f0e"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(183.37993552556435,361.4693082007)" id="Tianjin">
+                <path
+                    id="p_598.0007558247156"
+                    d="M-9.763774374181524e-15,53.15151209845127A53.15151209845127,53.15151209845127,0,1,1,9.763774374181524e-15,-53.15151209845127A53.15151209845127,53.15151209845127,0,1,1,-9.763774374181524e-15,53.15151209845127Z"
+                    fill="#ff7f0e"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(401.5159843046446,365.5375273733917)" id="Tokyo">
+                <path
+                    id="p_817.1701016740179"
+                    d="M-9.206268228413878e-15,50.11658999598165A50.11658999598165,50.11658999598165,0,1,1,9.206268228413878e-15,-50.11658999598165A50.11658999598165,50.11658999598165,0,1,1,-9.206268228413878e-15,50.11658999598165Z"
+                    fill="#ff7f0e"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(179.4864287242541,585.4192768275003)" id="Guangzhou">
+                <path
+                    id="p_814.2124130190673"
+                    d="M-9.057495221450934e-15,49.30670746731283A49.30670746731283,49.30670746731283,0,1,1,9.057495221450934e-15,-49.30670746731283A49.30670746731283,49.30670746731283,0,1,1,-9.057495221450934e-15,49.30670746731283Z"
+                    fill="#ff7f0e"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(406.90797394406627,582.6426567107907)" id="Mumbai">
+                <path
+                    id="p_1037.6395965954782"
+                    d="M-8.83379973202319e-15,48.08896594062128A48.08896594062128,48.08896594062128,0,1,1,8.83379973202319e-15,-48.08896594062128A48.08896594062128,48.08896594062128,0,1,1,-8.83379973202319e-15,48.08896594062128Z"
+                    fill="#ff7f0e"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(119.13561640269663,437.0156446200283)" id="Shenzhen">
+                <path
+                    id="p_600.258842040412"
+                    d="M-8.102431186716448e-15,44.10758101768704A44.10758101768704,44.10758101768704,0,1,1,8.102431186716448e-15,-44.10758101768704A44.10758101768704,44.10758101768704,0,1,1,-8.102431186716448e-15,44.10758101768704Z"
+                    fill="#ff7f0e"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(464.53674809020765,437.02584400526354)" id="Jakarta">
+                <path
+                    id="p_944.8361933546004"
+                    d="M-7.94923159043571e-15,43.273601259129165A43.273601259129165,43.273601259129165,0,1,1,7.94923159043571e-15,-43.273601259129165A43.273601259129165,43.273601259129165,0,1,1,-7.94923159043571e-15,43.273601259129165Z"
+                    fill="#ff7f0e"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(621.4963153678693,456.86445839281726)" id="Lagos">
+                <path
+                    id="p_1135.518975941672"
+                    d="M-1.0499791401894113e-14,57.15820218098517A57.15820218098517,57.15820218098517,0,1,1,1.0499791401894113e-14,-57.15820218098517A57.15820218098517,57.15820218098517,0,1,1,-1.0499791401894113e-14,57.15820218098517Z"
+                    fill="#1f77b4"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(725.7827332544656,456.86445839281726)" id="Cairo">
+                <path
+                    id="p_1227.8650420357867"
+                    d="M-8.306384361390783e-15,45.21785038850392A45.21785038850392,45.21785038850392,0,1,1,8.306384361390783e-15,-45.21785038850392A45.21785038850392,45.21785038850392,0,1,1,-8.306384361390783e-15,45.21785038850392Z"
+                    fill="#1f77b4"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(684.3374106381832,533.8861675800587)" id="Kinshasa-Brazzaville">
+                <path
+                    id="p_1258.559975087613"
+                    d="M-7.409675897281884e-15,40.336396869371036A40.336396869371036,40.336396869371036,0,1,1,7.409675897281884e-15,-40.336396869371036A40.336396869371036,40.336396869371036,0,1,1,-7.409675897281884e-15,40.336396869371036Z"
+                    fill="#1f77b4"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(683.6512431724736,387.13233429878795)" id="Mogadishu">
+                <path
+                    id="p_1105.127023017856"
+                    d="M-6.308788599049203e-15,34.34344554659421A34.34344554659421,34.34344554659421,0,1,1,6.308788599049203e-15,-34.34344554659421A34.34344554659421,34.34344554659421,0,1,1,-6.308788599049203e-15,34.34344554659421Z"
+                    fill="#1f77b4"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(619.535855163462,366.8128457165881)" id="Khartoum-Omdurman">
+                <path
+                    id="p_1017.3530835379433"
+                    d="M-5.695412697229318e-15,31.00438265789334A31.00438265789334,31.00438265789334,0,1,1,5.695412697229318e-15,-31.00438265789334A31.00438265789334,31.00438265789334,0,1,1,-5.695412697229318e-15,31.00438265789334Z"
+                    fill="#1f77b4"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(613.2239762022801,545.3284182182156)" id="Luanda">
+                <path
+                    id="p_1188.3337215945987"
+                    d="M-5.4707410497188334e-15,29.781327174103186A29.781327174103186,29.781327174103186,0,1,1,5.4707410497188334e-15,-29.781327174103186A29.781327174103186,29.781327174103186,0,1,1,-5.4707410497188334e-15,29.781327174103186Z"
+                    fill="#1f77b4"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(748.4119620678405,384.6438090771155)" id="Alexandria">
+                <path
+                    id="p_1161.6104741480578"
+                    d="M-5.245413845002804e-15,28.554703003101878A28.554703003101878,28.554703003101878,0,1,1,5.245413845002804e-15,-28.554703003101878A28.554703003101878,28.554703003101878,0,1,1,-5.245413845002804e-15,28.554703003101878Z"
+                    fill="#1f77b4"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(754.702225085242,526.7249958203283)" id="Dar es Salaam">
+                <path
+                    id="p_1309.908738021938"
+                    d="M-5.2319698157130535e-15,28.481517116367783A28.481517116367783,28.481517116367783,0,1,1,5.2319698157130535e-15,-28.481517116367783A28.481517116367783,28.481517116367783,0,1,1,-5.2319698157130535e-15,28.481517116367783Z"
+                    fill="#1f77b4"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(564.2618623111554,391.6641769603618)" id="Abidjan">
+                <path
+                    id="p_983.6149458927916"
+                    d="M-5.086369629845067e-15,27.68890662127451A27.68890662127451,27.68890662127451,0,1,1,5.086369629845067e-15,-27.68890662127451A27.68890662127451,27.68890662127451,0,1,1,-5.086369629845067e-15,27.68890662127451Z"
+                    fill="#1f77b4"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(562.2456800076033,518.068867792955)" id="Greater Johannesburg">
+                <path
+                    id="p_1106.4317626878785"
+                    d="M-4.7976545421600796e-15,26.117214887320404A26.117214887320404,26.117214887320404,0,1,1,4.7976545421600796e-15,-26.117214887320404A26.117214887320404,26.117214887320404,0,1,1,-4.7976545421600796e-15,26.117214887320404Z"
+                    fill="#1f77b4"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(489.62517143944723,716.6859520127599)" id="Istanbul">
+                <path
+                    id="p_1257.3681203834335"
+                    d="M-9.379018179885417e-15,51.05699693122651A51.05699693122651,51.05699693122651,0,1,1,9.379018179885417e-15,-51.05699693122651A51.05699693122651,51.05699693122651,0,1,1,-9.379018179885417e-15,51.05699693122651Z"
+                    fill="#2ca02c"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(590.4640945023888,716.6859520127599)" id="Moscow">
+                <path
+                    id="p_1355.0216073297565"
+                    d="M-8.793863058269613e-15,47.871560814607896A47.871560814607896,47.871560814607896,0,1,1,8.793863058269613e-15,-47.871560814607896A47.871560814607896,47.871560814607896,0,1,1,-8.793863058269613e-15,47.871560814607896Z"
+                    fill="#2ca02c"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(542.9358686186488,793.0338317859784)" id="London">
+                <path
+                    id="p_1376.1206992866223"
+                    d="M-7.375618839510673e-15,40.15099888199529A40.15099888199529,40.15099888199529,0,1,1,7.375618839510673e-15,-40.15099888199529A40.15099888199529,40.15099888199529,0,1,1,-7.375618839510673e-15,40.15099888199529Z"
+                    fill="#2ca02c"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(542.652003393512,651.3683310761124)" id="Saint Petersburg">
+                <path
+                    id="p_1225.1852282941443"
+                    d="M-5.724898120194808e-15,31.164893824519883A31.164893824519883,31.164893824519883,0,1,1,5.724898120194808e-15,-31.164893824519883A31.164893824519883,31.164893824519883,0,1,1,-5.724898120194808e-15,31.164893824519883Z"
+                    fill="#2ca02c"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(485.3616870989284,638.103503392802)" id="Berlin">
+                <path
+                    id="p_1149.1958493737288"
+                    d="M-4.7266453559687445e-15,25.730658881998302A25.730658881998302,25.730658881998302,0,1,1,4.7266453559687445e-15,-25.730658881998302A25.730658881998302,25.730658881998302,0,1,1,-4.7266453559687445e-15,25.730658881998302Z"
+                    fill="#2ca02c"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(599.3956792581168,643.1899911249033)" id="Madrid">
+                <path
+                    id="p_1266.8404207912342"
+                    d="M-4.455525367730632e-15,24.254750408214257A24.254750408214257,24.254750408214257,0,1,1,4.455525367730632e-15,-24.254750408214257A24.254750408214257,24.254750408214257,0,1,1,-4.455525367730632e-15,24.254750408214257Z"
+                    fill="#2ca02c"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(477.62912078669626,791.9576529373884)" id="Kiev">
+                <path
+                    id="p_1292.8410238396343"
+                    d="M-4.2717364455869844e-15,23.25425011554969A23.25425011554969,23.25425011554969,0,1,1,4.2717364455869844e-15,-23.25425011554969A23.25425011554969,23.25425011554969,0,1,1,-4.2717364455869844e-15,23.25425011554969Z"
+                    fill="#2ca02c"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(607.8715307291613,787.471017168626)" id="Rome">
+                <path
+                    id="p_1418.4546838363767"
+                    d="M-4.245630494797766e-15,23.112135938589205A23.112135938589205,23.112135938589205,0,1,1,4.245630494797766e-15,-23.112135938589205A23.112135938589205,23.112135938589205,0,1,1,-4.245630494797766e-15,23.112135938589205Z"
+                    fill="#2ca02c"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(442.72151493754916,660.2561664627106)" id="Paris">
+                <path
+                    id="p_1123.3879294323967"
+                    d="M-3.749301738353999e-15,20.41024803213688A20.41024803213688,20.41024803213688,0,1,1,3.749301738353999e-15,-20.41024803213688A20.41024803213688,20.41024803213688,0,1,1,-3.749301738353999e-15,20.41024803213688Z"
+                    fill="#2ca02c"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(637.9127318292997,666.8427534771271)" id="Minsk">
+                <path
+                    id="p_1323.790109687239"
+                    d="M-3.4966037731401214e-15,19.034624380812456A19.034624380812456,19.034624380812456,0,1,1,3.4966037731401214e-15,-19.034624380812456A19.034624380812456,19.034624380812456,0,1,1,-3.4966037731401214e-15,19.034624380812456Z"
+                    fill="#2ca02c"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(503.54115449060197,214.16456931118822)" id="São Paulo">
+                <path
+                    id="p_764.8687262835442"
+                    d="M-8.663703004118804e-15,47.163002481753985A47.163002481753985,47.163002481753985,0,1,1,8.663703004118804e-15,-47.163002481753985A47.163002481753985,47.163002481753985,0,1,1,-8.663703004118804e-15,47.163002481753985Z"
+                    fill="#9467bd"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(593.2731251988002,214.16456931118822)" id="Lima">
+                <path
+                    id="p_848.0962974193255"
+                    d="M-7.46886418660845e-15,40.65860290933715A40.65860290933715,40.65860290933715,0,1,1,7.46886418660845e-15,-40.65860290933715A40.65860290933715,40.65860290933715,0,1,1,-7.46886418660845e-15,40.65860290933715Z"
+                    fill="#9467bd"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(554.4995235854637,285.0487338356128)" id="Bogotá">
+                <path
+                    id="p_877.7750623662247"
+                    d="M-7.022150147655891e-15,38.22680494514819A38.22680494514819,38.22680494514819,0,1,1,7.022150147655891e-15,-38.22680494514819A38.22680494514819,38.22680494514819,0,1,1,-7.022150147655891e-15,38.22680494514819Z"
+                    fill="#9467bd"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(554.243522486993,147.4830155845442)" id="Rio de Janeiro">
+                <path
+                    id="p_736.4216591443322"
+                    d="M-6.373390345174241e-15,34.695121072795A34.695121072795,34.695121072795,0,1,1,6.373390345174241e-15,-34.695121072795A34.695121072795,34.695121072795,0,1,1,-6.373390345174241e-15,34.695121072795Z"
+                    fill="#9467bd"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(486.81943482843263,134.84099199101297)" id="Santiago">
+                <path
+                    id="p_653.6539809266862"
+                    d="M-5.877120544616993e-15,31.993554107240683A31.993554107240683,31.993554107240683,0,1,1,5.877120544616993e-15,-31.993554107240683A31.993554107240683,31.993554107240683,0,1,1,-5.877120544616993e-15,31.993554107240683Z"
+                    fill="#9467bd"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(489.65432602446475,286.6473815604726)" id="Caracas">
+                <path
+                    id="p_801.0294378565854"
+                    d="M-4.542410359102964e-15,24.727730271648213A24.727730271648213,24.727730271648213,0,1,1,4.542410359102964e-15,-24.727730271648213A24.727730271648213,24.727730271648213,0,1,1,-4.542410359102964e-15,24.727730271648213Z"
+                    fill="#9467bd"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(614.5558181155957,151.27330559480967)" id="Buenos Aires">
+                <path
+                    id="p_789.6549148376457"
+                    d="M-4.376726826169251e-15,23.82579112724038A23.82579112724038,23.82579112724038,0,1,1,4.376726826169251e-15,-23.82579112724038A23.82579112724038,23.82579112724038,0,1,1,-4.376726826169251e-15,23.82579112724038Z"
+                    fill="#9467bd"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(617.2186519576446,275.52746118475363)" id="Salvador">
+                <path
+                    id="p_916.046657976591"
+                    d="M-4.280240647437516e-15,23.300544834192664A23.300544834192664,23.300544834192664,0,1,1,4.280240647437516e-15,-23.300544834192664A23.300544834192664,23.300544834192664,0,1,1,-4.280240647437516e-15,23.300544834192664Z"
+                    fill="#9467bd"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(447.49899223339895,259.9209435444895)" id="Brasília">
+                <path
+                    id="p_730.695512224542"
+                    d="M-4.275654029055571e-15,23.27557644665356A23.27557644665356,23.27557644665356,0,1,1,4.275654029055571e-15,-23.27557644665356A23.27557644665356,23.27557644665356,0,1,1,-4.275654029055571e-15,23.27557644665356Z"
+                    fill="#9467bd"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(445.8299282289152,172.77521992501806)" id="Fortaleza">
+                <path
+                    id="p_640.550537590313"
+                    d="M-4.031302639395679e-15,21.945389436379692A21.945389436379692,21.945389436379692,0,1,1,4.031302639395679e-15,-21.945389436379692A21.945389436379692,21.945389436379692,0,1,1,-4.031302639395679e-15,21.945389436379692Z"
+                    fill="#9467bd"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(275.9003168399568,140.9852782750681)" id="Mexico City">
+                <path
+                    id="p_457.59956619034637"
+                    d="M-7.47903515369555e-15,40.71397107532145A40.71397107532145,40.71397107532145,0,1,1,7.47903515369555e-15,-40.71397107532145A40.71397107532145,40.71397107532145,0,1,1,-7.47903515369555e-15,40.71397107532145Z"
+                    fill="#d62728"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(358.38923143374524,140.9852782750681)" id="New York City">
+                <path
+                    id="p_539.2390879101732"
+                    d="M-7.323004214048208e-15,39.864578201359876A39.864578201359876,39.864578201359876,0,1,1,7.323004214048208e-15,-39.864578201359876A39.864578201359876,39.864578201359876,0,1,1,-7.323004214048208e-15,39.864578201359876Z"
+                    fill="#d62728"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(317.8590786768592,196.7592219235231)" id="Los Angeles">
+                <path
+                    id="p_541.788451705083"
+                    d="M-4.991075787408251e-15,27.170151104700732A27.170151104700732,27.170151104700732,0,1,1,4.991075787408251e-15,-27.170151104700732A27.170151104700732,27.170151104700732,0,1,1,-4.991075787408251e-15,27.170151104700732Z"
+                    fill="#d62728"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(317.81531657165726,90.59462986564571)" id="Toronto">
+                <path
+                    id="p_431.33013422218824"
+                    d="M-4.2103701909923955e-15,22.92018778488524A22.92018778488524,22.92018778488524,0,1,1,4.2103701909923955e-15,-22.92018778488524A22.92018778488524,22.92018778488524,0,1,1,-4.2103701909923955e-15,22.92018778488524Z"
+                    fill="#d62728"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(272.82245953110265,75.94722913803096)" id="Chicago">
+                <path
+                    id="p_371.25618886452145"
+                    d="M-4.1307030732462006e-15,22.4865001953878A22.4865001953878,22.4865001953878,0,1,1,4.1307030732462006e-15,-22.4865001953878A22.4865001953878,22.4865001953878,0,1,1,-4.1307030732462006e-15,22.4865001953878Z"
+                    fill="#d62728"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(361.7054864462416,78.63986768798483)" id="Houston">
+                <path
+                    id="p_461.0039574361981"
+                    d="M-3.794923861292177e-15,20.65860330197164A20.65860330197164,20.65860330197164,0,1,1,3.794923861292177e-15,-20.65860330197164A20.65860330197164,20.65860330197164,0,1,1,-3.794923861292177e-15,20.65860330197164Z"
+                    fill="#d62728"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(269.35288494446894,203.1044494570858)" id="Havana">
+                <path
+                    id="p_492.29626955942894"
+                    d="M-3.6443532659373896e-15,19.838935157874257A19.838935157874257,19.838935157874257,0,1,1,3.6443532659373896e-15,-19.838935157874257A19.838935157874257,19.838935157874257,0,1,1,-3.6443532659373896e-15,19.838935157874257Z"
+                    fill="#d62728"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(364.8444533972573,200.46143001170032)" id="Montreal">
+                <path
+                    id="p_583.3563735788235"
+                    d="M-3.315821251435043e-15,18.05049016986583A18.05049016986583,18.05049016986583,0,1,1,3.315821251435043e-15,-18.05049016986583A18.05049016986583,18.05049016986583,0,1,1,-3.315821251435043e-15,18.05049016986583Z"
+                    fill="#d62728"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(235.8285029169142,95.94926741735244)" id="Ecatepec de Morelos">
+                <path
+                    id="p_349.43603960101007"
+                    d="M-3.2437714403999114e-15,17.65826926674342A17.65826926674342,17.65826926674342,0,1,1,3.2437714403999114e-15,-17.65826926674342A17.65826926674342,17.65826926674342,0,1,1,-3.2437714403999114e-15,17.65826926674342Z"
+                    fill="#d62728"
+                    stroke="none"
+                />
+            </g>
+            <g transform="translate(397.03456217392244,96.61115864020863)" id="Philadelphia">
+                <path
+                    id="p_510.7139933990223"
+                    d="M-3.135390808209223e-15,17.06827258489117A17.06827258489117,17.06827258489117,0,1,1,3.135390808209223e-15,-17.06827258489117A17.06827258489117,17.06827258489117,0,1,1,-3.135390808209223e-15,17.06827258489117Z"
+                    fill="#d62728"
+                    stroke="none"
+                />
+            </g>
+        </g>
+        <g id="labels">
+            <g transform="translate(225.2710136746634,476.2714925659234)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">China</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">24256800</tspan>
+                </text>
+            </g>
+            <g transform="translate(360.41468463867324,476.2714925659234)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Pakistan</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">23500000</tspan>
+                </text>
+            </g>
+            <g transform="translate(293.87218880598306,589.3871447730157)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">China</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">21516000</tspan>
+                </text>
+            </g>
+            <g transform="translate(293.81454772008067,371.8433186289248)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">India</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">16787941</tspan>
+                </text>
+            </g>
+            <g transform="translate(183.37993552556435,361.4693082007)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">China</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">15200000</tspan>
+                </text>
+            </g>
+            <g transform="translate(401.5159843046446,365.5375273733917)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Japan</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">13513734</tspan>
+                </text>
+            </g>
+            <g transform="translate(179.4864287242541,585.4192768275003)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">China</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">13080500</tspan>
+                </text>
+            </g>
+            <g transform="translate(406.90797394406627,582.6426567107907)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">India</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">12442373</tspan>
+                </text>
+            </g>
+            <g transform="translate(119.13561640269663,437.0156446200283)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">China</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">10467400</tspan>
+                </text>
+            </g>
+            <g transform="translate(464.53674809020765,437.02584400526354)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Indonesia</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">10075310</tspan>
+                </text>
+            </g>
+            <g transform="translate(621.4963153678693,456.86445839281726)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Nigeria</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">17578000</tspan>
+                </text>
+            </g>
+            <g transform="translate(725.7827332544656,456.86445839281726)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Egypt</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">11001000</tspan>
+                </text>
+            </g>
+            <g transform="translate(684.3374106381832,533.8861675800587)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Democratic Republic of the Congo</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">8754000</tspan>
+                </text>
+            </g>
+            <g transform="translate(683.6512431724736,387.13233429878795)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Somalia</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">6346000</tspan>
+                </text>
+            </g>
+            <g transform="translate(619.535855163462,366.8128457165881)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Sudan</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">5172000</tspan>
+                </text>
+            </g>
+            <g transform="translate(613.2239762022801,545.3284182182156)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Angola</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">4772000</tspan>
+                </text>
+            </g>
+            <g transform="translate(748.4119620678405,384.6438090771155)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Egypt</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">4387000</tspan>
+                </text>
+            </g>
+            <g transform="translate(754.702225085242,526.7249958203283)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Tanzania</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">4364541</tspan>
+                </text>
+            </g>
+            <g transform="translate(564.2618623111554,391.6641769603618)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Ivory Coast</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">4125000</tspan>
+                </text>
+            </g>
+            <g transform="translate(562.2456800076033,518.068867792955)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">South Africa</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">3670000</tspan>
+                </text>
+            </g>
+            <g transform="translate(489.62517143944723,716.6859520127599)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Turkey</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">14025646</tspan>
+                </text>
+            </g>
+            <g transform="translate(590.4640945023888,716.6859520127599)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Russia</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">12330126</tspan>
+                </text>
+            </g>
+            <g transform="translate(542.9358686186488,793.0338317859784)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">United Kingdom</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">8673713</tspan>
+                </text>
+            </g>
+            <g transform="translate(542.652003393512,651.3683310761124)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Russia</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">5225690</tspan>
+                </text>
+            </g>
+            <g transform="translate(485.3616870989284,638.103503392802)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Germany</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">3562166</tspan>
+                </text>
+            </g>
+            <g transform="translate(599.3956792581168,643.1899911249033)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Spain</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">3165235</tspan>
+                </text>
+            </g>
+            <g transform="translate(477.62912078669626,791.9576529373884)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Ukraine</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">2909491</tspan>
+                </text>
+            </g>
+            <g transform="translate(607.8715307291613,787.471017168626)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Italy</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">2874038</tspan>
+                </text>
+            </g>
+            <g transform="translate(442.72151493754916,660.2561664627106)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">France</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">2241346</tspan>
+                </text>
+            </g>
+            <g transform="translate(637.9127318292997,666.8427534771271)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Belarus</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">1949400</tspan>
+                </text>
+            </g>
+            <g transform="translate(503.54115449060197,214.16456931118822)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Brazil</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">11967825</tspan>
+                </text>
+            </g>
+            <g transform="translate(593.2731251988002,214.16456931118822)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Peru</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">8894412</tspan>
+                </text>
+            </g>
+            <g transform="translate(554.4995235854637,285.0487338356128)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Colombia</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">7862277</tspan>
+                </text>
+            </g>
+            <g transform="translate(554.243522486993,147.4830155845442)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Brazil</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">6476631</tspan>
+                </text>
+            </g>
+            <g transform="translate(486.81943482843263,134.84099199101297)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Chile</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">5507282</tspan>
+                </text>
+            </g>
+            <g transform="translate(489.65432602446475,286.6473815604726)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Venezuela</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">3289886</tspan>
+                </text>
+            </g>
+            <g transform="translate(614.5558181155957,151.27330559480967)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Argentina</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">3054267</tspan>
+                </text>
+            </g>
+            <g transform="translate(617.2186519576446,275.52746118475363)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Brazil</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">2921087</tspan>
+                </text>
+            </g>
+            <g transform="translate(447.49899223339895,259.9209435444895)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Brazil</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">2914830</tspan>
+                </text>
+            </g>
+            <g transform="translate(445.8299282289152,172.77521992501806)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Brazil</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">2591188</tspan>
+                </text>
+            </g>
+            <g transform="translate(275.9003168399568,140.9852782750681)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Mexico</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">8918653</tspan>
+                </text>
+            </g>
+            <g transform="translate(358.38923143374524,140.9852782750681)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">United States</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">8550405</tspan>
+                </text>
+            </g>
+            <g transform="translate(317.8590786768592,196.7592219235231)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">United States</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">3971883</tspan>
+                </text>
+            </g>
+            <g transform="translate(317.81531657165726,90.59462986564571)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Canada</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">2826498</tspan>
+                </text>
+            </g>
+            <g transform="translate(272.82245953110265,75.94722913803096)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">United States</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">2720546</tspan>
+                </text>
+            </g>
+            <g transform="translate(361.7054864462416,78.63986768798483)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">United States</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">2296224</tspan>
+                </text>
+            </g>
+            <g transform="translate(269.35288494446894,203.1044494570858)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Cuba</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">2117625</tspan>
+                </text>
+            </g>
+            <g transform="translate(364.8444533972573,200.46143001170032)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Canada</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">1753034</tspan>
+                </text>
+            </g>
+            <g transform="translate(235.8285029169142,95.94926741735244)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">Mexico</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">1677678</tspan>
+                </text>
+            </g>
+            <g transform="translate(397.03456217392244,96.61115864020863)">
+                <text text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,-11.5)">
+                    <tspan x="0" y="0" dy="0" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;">United States</tspan>
+                    <tspan x="0" y="0" dy="12" style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;">1567442</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+    <g id="legend" transform="translate(900,20)">
+        <g transform="translate(5,0)">
+            <g class="legendSize" transform="translate(0,0)">
+                <g class="legendCells" transform="translate(50,16)">
+                    <g class="cell" transform="translate(0, 25)">
+                        <circle class="swatch" r="25" fill="none" stroke="#ccc" />
+                        <text class="label" transform="translate( 55,&#10;          5)" font-family='"Arial", sans-serif' font-size="10px"><tspan x="0" dy="0em">3362732.8</tspan></text>
+                    </g>
+                    <g class="cell" transform="translate(0, 125)">
+                        <circle class="swatch" r="50" fill="none" stroke="#ccc" />
+                        <text class="label" transform="translate( 55,&#10;          5)" font-family='"Arial", sans-serif' font-size="10px"><tspan x="0" dy="0em">13450931.1</tspan></text>
+                    </g>
+                </g>
+                <text class="legendTitle" font-family='"Arial", sans-serif' font-size="12px" font-weight="bold"><tspan x="0" dy="0em">Population [sum]</tspan></text>
+            </g>
+            <g class="legendColor" transform="translate(0,224)">
+                <g class="legendCells" transform="translate(0,16)">
+                    <g class="cell" transform="translate(0, 0)">
+                        <rect class="swatch" height="15" width="15" style="fill: rgb(31, 119, 180);" />
+                        <text class="label" transform="translate( 20, 12.5)" font-family='"Arial", sans-serif' font-size="10px"><tspan x="0" dy="0em">Africa</tspan></text>
+                    </g>
+                    <g class="cell" transform="translate(0, 21)">
+                        <rect class="swatch" height="15" width="15" style="fill: rgb(255, 127, 14);" />
+                        <text class="label" transform="translate( 20, 12.5)" font-family='"Arial", sans-serif' font-size="10px"><tspan x="0" dy="0em">Asia</tspan></text>
+                    </g>
+                    <g class="cell" transform="translate(0, 42)">
+                        <rect class="swatch" height="15" width="15" style="fill: rgb(44, 160, 44);" />
+                        <text class="label" transform="translate( 20, 12.5)" font-family='"Arial", sans-serif' font-size="10px"><tspan x="0" dy="0em">Europe</tspan></text>
+                    </g>
+                    <g class="cell" transform="translate(0, 63)">
+                        <rect class="swatch" height="15" width="15" style="fill: rgb(214, 39, 40);" />
+                        <text class="label" transform="translate( 20, 12.5)" font-family='"Arial", sans-serif' font-size="10px"><tspan x="0" dy="0em">North America</tspan></text>
+                    </g>
+                    <g class="cell" transform="translate(0, 84)">
+                        <rect class="swatch" height="15" width="15" style="fill: rgb(148, 103, 189);" />
+                        <text class="label" transform="translate( 20, 12.5)" font-family='"Arial", sans-serif' font-size="10px"><tspan x="0" dy="0em">South America</tspan></text>
+                    </g>
+                </g>
+                <text class="legendTitle" font-family='"Arial", sans-serif' font-size="12px" font-weight="bold"><tspan x="0" dy="0em">Continent [csvDistinct]</tspan></text>
+            </g>
+        </g>
+    </g>
+</svg>
+
+                        <figcaption class="p-3 text-center text-muted small">Gráfica no figurativa generada con <a href="https://app.rawgraphs.io/" class="link-dark">RAWGraphs</a></figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section>
+                <div class="row">
+                    <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
+                        <h2 class="text-center mt-5">GRÁFICA FIGURATIVA</h2>
+                        <h3 class="text-center my-3">svg como data de un elemento object</h3>
+                        <p>Reemplaza este párrafo con un texto que explique de que trata la selección que han preparado con 6 gráficas figurativas. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="col-md-11 col-lg-10 col-xl-9 col-xxl-8 mx-auto">
+                        <div class="row shadow-sm mb-4">
+                            <figure class="col-md-6 col-lg-4">
+                                <object type="image/svg+xml" data="img/fig1.svg">Acá se vería un icon</object>
+                            </figure>
+                            <figure class="col-md-6 col-lg-4">
+                                <object type="image/svg+xml" data="img/fig2.svg">Acá se vería un icon</object>
+                            </figure>
+                            <figure class="col-md-6 col-lg-4">
+                                <object type="image/svg+xml" data="img/fig3.svg">Acá se vería un icon</object>
+                            </figure>
+                            <figure class="col-md-6 col-lg-4">
+                                <object type="image/svg+xml" data="img/fig4.svg">Acá se vería un icon</object>
+                            </figure>
+                            <figure class="col-md-6 col-lg-4">
+                                <object type="image/svg+xml" data="img/fig5.svg">Acá se vería un icon</object>
+                            </figure>
+                            <figure class="col-md-6 col-lg-4">
+                                <object type="image/svg+xml" data="img/fig6.svg">Acá se vería un icon</object>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto mb-5">
+                        <p>Reemplaza este párrafo con un texto de cierre sobre el uso de SVG. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar, nisi eget finibus luctus, nisi purus rutrum urna, et vulputate lorem justo tempor nisl.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-light">
+            <div class="container">
+                <div class="row py-3">
+                    <div class="col-12">
+                        <p class="d-flex justify-content-between small p-1 m-0">
+                            <a href="https://github.com/profesorfaco/dno075-2023-1/" class="link-dark">Infografía Digital</a>
+                            <a href="https://github.com/profesorfaco/dno075-2023-1/tree/main/clase-04" class="link-dark">Martes 28 de marzo, 2023</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>
